@@ -1,11 +1,11 @@
-.face {
+.front {
   height: 100px;
   width: 100px;
   background-color: blue;
   position: absolute;
   border: 1px solid black;
 }
-.cube {
+.cube-1 {
   transform-style: preserve-3d;
   animation: rotate 4s infinite;
 }
