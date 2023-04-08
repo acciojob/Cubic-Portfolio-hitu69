@@ -1,65 +1,44 @@
-
-/* Your CSS Code here. */
-.scene-1 {
-            width: 200px;
-            height: 200px;
-            perspective: 600px;
-	 padding:100px;
-        }
-
-        .cube-1{
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transform-style: preserve-3d;
-            animation: rotateCube 10s infinite linear;
-        }
-
-        .cube-1 {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            border: 2px solid black;
-            line-height: 200px;
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .front {
-            background-color: lightblue;
-            transform: translateZ(100px);
-        }
-
-        .back {
-            background-color: lightgreen;
-            transform: rotateY(180deg) translateZ(100px);
-        }
-
-        .right {
-            background-color: lightpink;
-            transform: rotateY(90deg) translateZ(100px);
-        }
-
-        .left {
-            background-color: lightyellow;
-            transform: rotateY(-90deg) translateZ(100px);
-        }
-
-        .top {
-            background-color: lightsalmon;
-            transform: rotateX(90deg) translateZ(100px);
-        }
-
-        .bottom {
-            background-color: lightgray;
-            transform: rotateX(-90deg) translateZ(100px);
-        }
-
-        @keyframes rotateCube {
-            from {
-                transform: rotate3d(1, 1, 1, 0deg);
-            }
-            to {
-                transform: rotate3d(1, 1, 1, 360deg);
-            }
-		}
+.face {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  position: absolute;
+  border: 1px solid black;
+}
+.cube {
+  transform-style: preserve-3d;
+  animation: rotate 4s infinite;
+}
+.face2 {
+  transform: translateZ(-100px);
+}
+.face3 {
+  transform-origin: top left;
+  transform: rotateY(90deg);
+}
+.face4 {
+  transform-origin: top right;
+  transform: rotateY(-90deg);
+}
+.face5 {
+  transform-origin: bottom;
+  transform: rotateX(90deg);
+}
+.face6 {
+  transform-origin: bottom;
+  transform: rotateX(90deg) translateZ(100px);
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
