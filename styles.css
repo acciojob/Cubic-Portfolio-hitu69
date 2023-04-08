@@ -1,11 +1,17 @@
+
+
 .front {
+
   height: 100px;
   width: 100px;
   background-color: blue;
   position: absolute;
+	transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+
   border: 1px solid black;
 }
 .cube-1 {
+
   transform-style: preserve-3d;
   animation: rotate 4s infinite;
 }
@@ -40,5 +46,6 @@ body {
   }
   to {
     transform: rotateY(360deg);
+	  
   }
 }
